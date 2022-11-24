@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple-deployment
+  name: simple-deployment-ishuar
 spec:
   replicas: 1
   selector:
@@ -14,7 +14,7 @@ spec:
         app: trivial-go-web-app
     spec:
       containers:
-      - name: webserver-simple
-        image: docker.io/kostiscodefresh/gitops-simple-app:v1.0
-        ports:
-        - containerPort: 8080
+        - name: webserver-simple
+          image: docker.io/kostiscodefresh/gitops-simple-app:v1.0
+          ports:
+            - containerPort: 8080
