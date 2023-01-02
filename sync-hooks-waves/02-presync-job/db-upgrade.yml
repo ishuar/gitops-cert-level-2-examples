@@ -9,10 +9,19 @@ spec:
   template:
     spec:
       containers:
-      - name: dummy-run
-        image: alpine
-        command:
-          - "sleep"
-          - "10"
+        - name: dummy-run
+          image: alpine
+          command:
+            - "sleep"
+            - "10"
       restartPolicy: Never
-  backoffLimit: 2    
+  backoffLimit: 2
+project: default
+source:
+  repoURL: "https://github.com/ishuar/gitops-cert-level-2-examples"
+  path: ./sync-hooks-waves/02-presync-job
+  targetRevision: cert/gitops-scale
+destination:
+  server: "https://kubernetes.default.svc"
+  namespace: example02
+syncPolicy: {}
