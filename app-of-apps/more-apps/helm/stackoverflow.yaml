@@ -4,7 +4,7 @@ metadata:
   name: moon
   namespace: argocd
 spec:
-  project: aerokube
+  project: default #aerokube
   source:
     chart: moon2
     repoURL: https://charts.aerokube.com/
