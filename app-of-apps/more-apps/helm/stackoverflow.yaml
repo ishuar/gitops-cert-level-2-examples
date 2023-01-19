@@ -11,28 +11,28 @@ spec:
     targetRevision: 2.4.0
     helm:
       values: |
-          customIngress:
-            enabled: true
-            annotations:
-              cert-manager.io/cluster-issuer: "letsencrypt"   
-            ingressClassName: nginx
-            host: moon3.benighil-mohamed.com
-            tls:
-            - secretName: moon-tls
-              hosts:
-              - moon3.benighil-mohamed.com
-          configs:
-            default:
-              containers:
-                vnc-server:
-                  repository: quay.io/aerokube/vnc-server
-                  resources:
-                    limits:
-                      cpu: 400m
-                      memory: 512Mi
-                    requests:
-                      cpu: 200m
-                      memory: 512Mi
+        customIngress:
+          enabled: true
+          annotations:
+            cert-manager.io/cluster-issuer: "letsencrypt"   
+          ingressClassName: nginx
+          host: moon3.benighil-mohamed.com
+          tls:
+          - secretName: moon-tls
+            hosts:
+            - moon3.benighil-mohamed.com
+        configs:
+          default:
+            containers:
+              vnc-server:
+                repository: quay.io/aerokube/vnc-server
+                resources:
+                  limits:
+                    cpu: 400m
+                    memory: 512Mi
+                  requests:
+                    cpu: 200m
+                    memory: 512Mi
   destination:
     server: "https://kubernetes.default.svc"
     namespace: moon1
