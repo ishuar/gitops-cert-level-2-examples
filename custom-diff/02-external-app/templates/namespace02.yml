@@ -3,6 +3,5 @@ kind: Namespace
 metadata:
   name: example02
 
-# test verified commit
-# another verified commit test
-# another
+#something
+#something more
