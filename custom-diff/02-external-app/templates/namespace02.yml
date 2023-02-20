@@ -2,7 +2,3 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: example02
-
-#something
-#something more
-#anothqrb
